@@ -1,0 +1,274 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "cloudtrail:LookupEvents",
+                "cloudtrail:GetTrail",
+                "cloudtrail:ListPublicKeys",
+                "cloudtrail:ListTags",
+                "cloudtrail:GetTrailStatus",
+                "cloudtrail:GetEventSelectors",
+                "cloudtrail:GetInsightSelectors",
+                "cloudtrail:DescribeTrails"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "0.0.0.0/32"
+                }
+            }
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:DescribeInsightRules",
+                "cloudwatch:DescribeAlarmHistory",
+                "cloudwatch:GetDashboard",
+                "cloudwatch:GetInsightRuleReport",
+                "cloudwatch:GetMetricData",
+                "cloudwatch:DescribeAlarmsForMetric",
+                "cloudwatch:DescribeAlarms",
+                "cloudwatch:GetMetricStream",
+                "cloudwatch:GetMetricStatistics",
+                "cloudwatch:GetMetricWidgetImage",
+                "cloudwatch:DescribeAnomalyDetectors"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "0.0.0.0/32"
+                }
+            }
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:GetDefaultCreditSpecification",
+                "ec2:GetIpamResourceCidrs",
+                "ec2:GetIpamPoolCidrs",
+                "ec2:GetEbsEncryptionByDefault",
+                "ec2:ExportClientVpnClientConfiguration",
+                "ec2:GetCapacityReservationUsage",
+                "ec2:DescribeVolumesModifications",
+                "ec2:GetHostReservationPurchasePreview",
+                "ec2:GetNetworkInsightsAccessScopeAnalysisFindings",
+                "ec2:GetSubnetCidrReservations",
+                "ec2:GetConsoleScreenshot",
+                "ec2:GetConsoleOutput",
+                "ec2:ExportClientVpnClientCertificateRevocationList",
+                "ec2:GetLaunchTemplateData",
+                "ec2:GetSerialConsoleAccessStatus",
+                "ec2:GetFlowLogsIntegrationTemplate",
+                "ec2:DescribeScheduledInstanceAvailability",
+                "ec2:GetEbsDefaultKmsKeyId",
+                "ec2:GetIpamPoolAllocations",
+                "ec2:GetManagedPrefixListEntries",
+                "ec2:DescribeVpnConnections",
+                "ec2:DescribeTags",
+                "ec2:GetCoipPoolUsage",
+                "ec2:DescribeFastSnapshotRestores",
+                "ec2:GetNetworkInsightsAccessScopeContent",
+                "ec2:GetReservedInstancesExchangeQuote",
+                "ec2:GetAssociatedEnclaveCertificateIamRoles",
+                "ec2:GetIpamAddressHistory",
+                "ec2:GetPasswordData",
+                "ec2:GetInstanceTypesFromInstanceRequirements",
+                "ec2:GetAssociatedIpv6PoolCidrs",
+                "ec2:DescribeScheduledInstances",
+                "ec2:GetSpotPlacementScores",
+                "ec2:GetManagedPrefixListAssociations",
+                "ec2:DescribeElasticGpus"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "0.0.0.0/32"
+                }
+            }
+        },
+        {
+            "Sid": "VisualEditor3",
+            "Effect": "Allow",
+            "Action": [
+                "ecr:GetRegistryPolicy",
+                "ecr:DescribeImageScanFindings",
+                "ecr:GetLifecyclePolicyPreview",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:DescribeRegistry",
+                "ecr:DescribeImageReplicationStatus",
+                "ecr:GetAuthorizationToken",
+                "ecr:ListTagsForResource",
+                "ecr:BatchGetRepositoryScanningConfiguration",
+                "ecr:GetRegistryScanningConfiguration",
+                "ecr:BatchGetImage",
+                "ecr:DescribeRepositories",
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetRepositoryPolicy",
+                "ecr:GetLifecyclePolicy"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "0.0.0.0/32"
+                }
+            }
+        },
+        {
+            "Sid": "VisualEditor4",
+            "Effect": "Allow",
+            "Action": [
+                "ecs:ListAccountSettings",
+                "ecs:DescribeCapacityProviders",
+                "ecs:ListTagsForResource",
+                "ecs:DescribeServices",
+                "ecs:DescribeTaskSets",
+                "ecs:DescribeContainerInstances",
+                "ecs:DescribeTasks",
+                "ecs:DescribeTaskDefinition",
+                "ecs:DescribeClusters"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "0.0.0.0/32"
+                }
+            }
+        },
+        {
+            "Sid": "VisualEditor5",
+            "Effect": "Allow",
+            "Action": [
+                "lambda:GetLayerVersion",
+                "lambda:GetEventSourceMapping",
+                "lambda:GetFunction",
+                "lambda:GetAccountSettings",
+                "lambda:GetFunctionConfiguration",
+                "lambda:GetLayerVersionPolicy",
+                "lambda:GetFunctionCodeSigningConfig",
+                "lambda:GetProvisionedConcurrencyConfig",
+                "lambda:GetFunctionConcurrency",
+                "lambda:ListTags",
+                "lambda:GetFunctionEventInvokeConfig",
+                "lambda:GetCodeSigningConfig",
+                "lambda:GetAlias",
+                "lambda:GetPolicy"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "0.0.0.0/32"
+                }
+            }
+        },
+        {
+            "Sid": "VisualEditor6",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObjectVersionTagging",
+                "s3:GetStorageLensConfigurationTagging",
+                "s3:GetObjectAcl",
+                "s3:GetBucketObjectLockConfiguration",
+                "s3:GetIntelligentTieringConfiguration",
+                "s3:GetObjectVersionAcl",
+                "s3:GetBucketPolicyStatus",
+                "s3:GetObjectRetention",
+                "s3:GetBucketWebsite",
+                "s3:GetJobTagging",
+                "s3:GetMultiRegionAccessPoint",
+                "s3:GetObjectLegalHold",
+                "s3:GetBucketNotification",
+                "s3:DescribeMultiRegionAccessPointOperation",
+                "s3:GetReplicationConfiguration",
+                "s3:GetObject",
+                "s3:DescribeJob",
+                "s3:GetAnalyticsConfiguration",
+                "s3:GetObjectVersionForReplication",
+                "s3:GetAccessPointForObjectLambda",
+                "s3:GetStorageLensDashboard",
+                "s3:GetLifecycleConfiguration",
+                "s3:GetAccessPoint",
+                "s3:GetInventoryConfiguration",
+                "s3:GetBucketTagging",
+                "s3:GetAccessPointPolicyForObjectLambda",
+                "s3:GetBucketLogging",
+                "s3:GetAccelerateConfiguration",
+                "s3:GetBucketPolicy",
+                "s3:GetEncryptionConfiguration",
+                "s3:GetObjectVersionTorrent",
+                "s3:GetBucketRequestPayment",
+                "s3:GetAccessPointPolicyStatus",
+                "s3:GetObjectTagging",
+                "s3:GetMetricsConfiguration",
+                "s3:GetBucketOwnershipControls",
+                "s3:GetBucketPublicAccessBlock",
+                "s3:GetMultiRegionAccessPointPolicyStatus",
+                "s3:GetMultiRegionAccessPointPolicy",
+                "s3:GetAccessPointPolicyStatusForObjectLambda",
+                "s3:GetBucketVersioning",
+                "s3:GetBucketAcl",
+                "s3:GetAccessPointConfigurationForObjectLambda",
+                "s3:GetObjectTorrent",
+                "s3:GetStorageLensConfiguration",
+                "s3:GetAccountPublicAccessBlock",
+                "s3:GetBucketCORS",
+                "s3:GetBucketLocation",
+                "s3:GetAccessPointPolicy",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "ForAnyValue:IpAddress": {
+                    "aws:SourceIp": [
+                        "0.0.0.0/32",
+                        "0.0.0.0/32",
+                        "0.0.0.0/32"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "VisualEditor7",
+            "Effect": "Allow",
+            "Action": [
+                "sns:ListTagsForResource",
+                "sns:ListPhoneNumbersOptedOut",
+                "sns:GetEndpointAttributes",
+                "sns:GetTopicAttributes",
+                "sns:GetSMSSandboxAccountStatus",
+                "sns:GetPlatformApplicationAttributes",
+                "sns:GetSubscriptionAttributes",
+                "sns:GetSMSAttributes",
+                "sns:CheckIfPhoneNumberIsOptedOut"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "0.0.0.0/32"
+                }
+            }
+        },
+        {
+            "Sid": "VisualEditor8",
+            "Effect": "Allow",
+            "Action": [
+                "sqs:ListQueues",
+                "sqs:GetQueueUrl",
+                "sqs:ListDeadLetterSourceQueues",
+                "sqs:ReceiveMessage",
+                "sqs:GetQueueAttributes",
+                "sqs:ListQueueTags"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "0.0.0.0/32"
+                }
+            }
+        }
+    ]
+}
